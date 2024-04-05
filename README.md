@@ -1,8 +1,28 @@
-# React + Vite
+# Travel Planner App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the Travel Planner App! This app allows you to plan your travel itinerary by selecting your favorite country, state, city, and explore various tourist attractions.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Name Entry**: Start by entering your name to personalize your travel experience.
+- **Country Selection**: Choose your favorite country from a list of available countries.
+- **State Selection**: Once you've selected a country, choose a state within that country to explore.
+- **City Selection**: Select a city within the chosen state to discover its attractions.
+- **Place Exploration**: Explore various tourist places in the selected city, including their images and names.
+
+## Usage
+
+1. Clone this repository to your local machine.
+2. Install dependencies using `npm install` or `yarn install`.
+3. Start the development server using `npm start` or `yarn start`.
+4. Open your browser and navigate to `http://localhost:3000`.
+5. Enter your name and start planning your travel itinerary by selecting a country, state, city, and exploring places.
+
+## Technologies Used
+
+- React.js
+- React Router
+- Redux
+- Tailwind CSS
+
+## Project Structure
