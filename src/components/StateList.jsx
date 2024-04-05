@@ -15,8 +15,6 @@ const StateList = () => {
 
   const name = useSelector((state) => state.name.name);
 
-  console.log("selectedCountry", selectedCountry);
-
   const selectedStates = selectedCountry ? selectedCountry.states || [] : [];
 
   const handleStateClick = (stateId, stateName) => {
@@ -36,7 +34,7 @@ const StateList = () => {
   }
 
   return (
-    <div>
+    <div className="text-center justify-center">
       <div className="text-lg font-bold mb-4">
         <span>
           You know {name}, I like {selectedCountry ? selectedCountry.name : ""}{" "}
@@ -49,13 +47,13 @@ const StateList = () => {
         </div>
       </div>
       <div className="text-lg font-bold mb-4">Please select your State</div>
-      <div className="flex justify-center items-center h-[25rem]">
-        <div className="w-[50rem] py-2 border-[3px] border-black rounded-md">
-          <ul className="list-none w-[20rem] mx-auto hover:text-blue-500">
+      <div className="flex justify-center items-center h-auto">
+        <div className="w-full md:w-[50rem] py-2 border-[3px] border-black rounded-md">
+          <ul className="list-none w-full md:w-[20rem] mx-auto hover:text-blue-500">
             {selectedStates.map((state) => (
               <li
                 key={state.id}
-                className="py-2 border-12 border-solid border-black rounded-md m-[2rem] cursor-pointer hover:bg-green-300 transition-colors duration-300 "
+                className="py-2 border-12 border-solid border-black rounded-md m-2 cursor-pointer hover:bg-green-300 transition-colors duration-300 "
                 onClick={() => handleStateClick(state.id, state.name)}
               >
                 <Link

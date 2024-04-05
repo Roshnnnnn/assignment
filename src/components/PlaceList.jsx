@@ -24,13 +24,13 @@ const PlaceList = () => {
   }
 
   return (
-    <div>
+    <div className="container mx-auto">
       <div className="text-lg font-bold mb-4">
         You know what these are the best places
       </div>
-      <ul className="list-none grid grid-cols-2 gap-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-[4rem]">
         {selectedPlace.map((place) => (
-          <li
+          <div
             key={place.id}
             className="border border-gray-200 rounded-lg overflow-hidden cursor-pointer transition duration-300 hover:shadow-lg"
           >
@@ -43,10 +43,10 @@ const PlaceList = () => {
               <h3 className="text-lg font-bold mb-2">{place.name}</h3>
               <p className="text-sm text-gray-600">{place.description}</p>
             </div>
-          </li>
+          </div>
         ))}
-      </ul>
-      <div className="float-right m-6">
+      </div>
+      <div className="flex justify-center mt-6">
         <button className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded">
           <Link to={`/`}>Go to Home</Link>
         </button>

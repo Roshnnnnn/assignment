@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { selectCity } from "../redux/slices/countrySlice";
 import { Link, useParams } from "react-router-dom";
-import { FaArrowLeft } from "react-icons/fa6";
+import { FaArrowLeft } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import Loader from "../Loader";
 
@@ -10,14 +10,9 @@ const CityList = () => {
   const dispatch = useDispatch();
   const { stateId } = useParams();
 
-  const selectedCountry = useSelector(
-    (state) => state.products.selectedCountry
-  );
   const selectedState = useSelector((state) => state.products.selectedState);
   const selectedCity = useSelector((state) => state.products.selectedCity);
   const name = useSelector((state) => state.name.name);
-
-  console.log("selectedState:", selectedState);
 
   const handleCityClick = (cityId, cityName) => {
     dispatch(selectCity({ cityId, cityName }));
@@ -36,7 +31,7 @@ const CityList = () => {
   }
 
   return (
-    <div>
+    <div className="text-center justify-center">
       <div className="text-lg font-bold mb-4">
         <span>
           You know {name}, I like {selectedState ? selectedState.name : ""} as a
@@ -49,13 +44,13 @@ const CityList = () => {
         </div>
       </div>
       <div className="text-lg font-bold mb-4">Please select your City</div>
-      <div className="flex justify-center items-center h-[25rem]">
-        <div className="w-[50rem] py-2 border-[3px] border-black rounded-md">
-          <ul className="list-none w-[20rem] mx-auto hover:text-blue-500">
+      <div className="flex justify-center items-center h-auto">
+        <div className="w-full md:w-[50rem] py-2 border-[3px] border-black rounded-md">
+          <ul className="list-none w-full md:w-[20rem] mx-auto hover:text-blue-500">
             {selectedState.cities.map((city) => (
               <li
                 key={city.id}
-                className={`py-2 border-12 border-solid border-black rounded-md m-[2rem] cursor-pointer hover:bg-green-300 transition-colors duration-300 ${
+                className={`py-2 border-12 border-solid border-black rounded-md m-2 cursor-pointer hover:bg-green-300 transition-colors duration-300 ${
                   selectedCity && selectedCity.id === city.id
                     ? "bg-gray-100"
                     : ""
