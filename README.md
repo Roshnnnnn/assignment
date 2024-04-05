@@ -26,3 +26,23 @@ Welcome to the Travel Planner App! This app allows you to plan your travel itine
 - Tailwind CSS
 
 ## Project Structure
+
+travel-planner-app/
+├── src/
+│ ├── components/
+│ │ ├── CountryList.js
+│ │ ├── StateList.js
+│ │ ├── CityList.js
+│ │ ├── PlaceList.js
+│ │ └── Loader.js
+│ ├── redux/
+│ │ └── slices/
+│ │ ├── countrySlice.js
+│ │ └── ...
+│ ├── App.js
+│ └── index.js
+└── README.md
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
